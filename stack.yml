@@ -1,0 +1,11 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080  # can be a remote server
+  network: "func_functions"       # this is optional and defaults to func_functions
+
+functions:
+  on-deck:
+    lang: python
+    handler: ./on-deck
+    image: alexellis/faas-on-deck
+
